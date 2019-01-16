@@ -2330,3 +2330,16 @@ blockquote {
 
 
 
+/*------------------------------------------------------------------------------------------*/
+/* 4. Banner */
+/*------------------------------------------------------------------------------------------*/
+
+
+/* Banner Background and Text Colors */
+
+#banner{
+    background: url("assets/images/banner-images/banner-image-1.jpg") no-repeat center top;
+    background-size:cover;
+}
+
+

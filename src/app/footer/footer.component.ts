@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  cfg: { copyrighttext: string; developer: string; developerlink: string; };
 
-  constructor() { }
+  constructor(private config: ConfigService) { }
 
   ngOnInit() {
+    this.cfg =  this.config.getConfig().footer
   }
 
 }

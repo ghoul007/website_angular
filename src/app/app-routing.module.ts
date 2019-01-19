@@ -9,6 +9,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ClientComponent } from './client/client.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { HomeComponent } from './home/home.component';
+import { BlogComponent } from './blog/blog.component';
+import { ArticleComponent } from './article/article.component';
 
 
 const routes:Routes= [
@@ -19,6 +21,8 @@ const routes:Routes= [
   {path:'Testimonials', component:TestimonialComponent},
   {path:'Gallery', component:GalleryComponent},
   {path:'Clients', component:ClientComponent},
+  {path:'Blogs', component:BlogComponent},
+  {path:'article/:id', component:ArticleComponent},
   {path:'Pricing', component:PricingComponent}
 ]
 @NgModule({

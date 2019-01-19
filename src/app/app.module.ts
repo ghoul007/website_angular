@@ -15,6 +15,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ConfigService } from './config.service';
+import { BlogComponent } from './blog/blog.component';
+import { PostComponent } from './post/post.component';
+import { ArticleComponent } from './article/article.component';
  
 
 @NgModule({
@@ -31,6 +34,9 @@ import { ConfigService } from './config.service';
     SocialComponent,
     NavigationComponent,
     HomeComponent,
+    BlogComponent,
+    PostComponent,
+    ArticleComponent,
  
   ],
   imports: [

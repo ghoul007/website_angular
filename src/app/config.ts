@@ -102,7 +102,10 @@ export const config = {
             { id: 4, title: 'the third article', image:'gallery-image-4.jpg',author: 'd', publishdate: '2018-06-11', excert: '' },
             { id: 5, title: 'the third article', image:'gallery-image-5.jpg',author: 'e', publishdate: '2018-06-11', excert: '' },
             { id: 6, title: 'the third article', image:'gallery-image-6.jpg',author: 'f', publishdate: '2018-06-11', excert: '' },
-            { id: 7, title: 'the third article', image:'gallery-image-7.jpg',author: 'g', publishdate: '2018-06-11', excert: '' }
+            { id: 7, title: 'the third article', image:'gallery-image-7.jpg',author: 'g', publishdate: '2018-06-11', excert: '' },
+            { id: 8, title: 'the third article', image:'gallery-image-7.jpg',author: 'g', publishdate: '2018-06-11', excert: '' },
+            { id: 9, title: 'the third article', image:'gallery-image-7.jpg',author: 'g', publishdate: '2018-06-11', excert: '' },
+            { id: 10, title: 'the third article', image:'gallery-image-7.jpg',author: 'g', publishdate: '2018-06-11', excert: '' }
         ]
 
     }

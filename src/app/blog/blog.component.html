@@ -9,10 +9,16 @@
 
 
 
-      <div *ngFor="let post of cfg.posts"  class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+      <div *ngFor="let post of pages"  class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
 <app-post  [post]=post ></app-post>
 </div>
   </div>
 
+
+  <div>
+ 
+<app-pagination [pager]=pager  (setPage)="setPage($event)"></app-pagination>
+
+  </div>
 
 </section>

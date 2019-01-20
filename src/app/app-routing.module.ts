@@ -11,19 +11,22 @@ import { PricingComponent } from './pricing/pricing.component';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
-const routes:Routes= [
-  {path:'', redirectTo:'/Home', pathMatch:'full'},
-  {path:'Home', component:HomeComponent},
-  {path:'About', component:AboutComponent},
-  {path:'Services', component:ContentComponent},
-  {path:'Testimonials', component:TestimonialComponent},
-  {path:'Gallery', component:GalleryComponent},
-  {path:'Clients', component:ClientComponent},
-  {path:'Blogs', component:BlogComponent},
-  {path:'article/:id', component:ArticleComponent},
-  {path:'Pricing', component:PricingComponent}
+const routes: Routes = [
+  { path: '', redirectTo: '/Home', pathMatch: 'full' },
+  { path: 'Home', component: HomeComponent },
+  { path: 'About', component: AboutComponent },
+  { path: 'Services', component: ContentComponent },
+  { path: 'Testimonials', component: TestimonialComponent },
+  { path: 'Gallery', component: GalleryComponent },
+  { path: 'Clients', component: ClientComponent },
+  { path: 'Blogs', component: BlogComponent },
+  { path: 'article/:id', component: ArticleComponent },
+  { path: 'Pricing', component: PricingComponent },
+  { path: '404', component: NotFoundComponent },
+  { path: '**', redirectTo: '/404' }
 ]
 @NgModule({
   imports: [
@@ -31,6 +34,6 @@ const routes:Routes= [
     RouterModule.forRoot(routes)
   ],
   declarations: [],
-  exports:[RouterModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

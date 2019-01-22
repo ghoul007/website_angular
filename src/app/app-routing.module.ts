@@ -12,17 +12,24 @@ import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { ArticleComponent } from './article/article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'contactus', component: ContactusComponent },
   { path: 'About', component: AboutComponent },
   { path: 'Services', component: ContentComponent },
   { path: 'Testimonials', component: TestimonialComponent },
   { path: 'Gallery', component: GalleryComponent },
   { path: 'Clients', component: ClientComponent },
-  { path: 'Blogs', component: BlogComponent },
+  { path: 'Blogs', component: BlogComponent, canActivate:[AuthGuard] },
   { path: 'article/:id', component: ArticleComponent },
   { path: 'Pricing', component: PricingComponent },
   { path: '404', component: NotFoundComponent },

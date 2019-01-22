@@ -24,5 +24,11 @@
       <li>
         <a routerLink="/Blogs"  routerLinkActive="active" >Blog</a>
       </li>
+      <li *ngIf="!isLogin">
+        <a routerLink="/login" >Login</a>
+      </li>
+      <li *ngIf="isLogin">
+        <a (click)="logout()" >Logout</a>
+      </li>
     </ul>
   </nav>

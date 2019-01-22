@@ -21,8 +21,13 @@ import { ArticleComponent } from './article/article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { PagerService } from './pager.service';
- 
-
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from './in-memory-data.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,11 +47,17 @@ import { PagerService } from './pager.service';
     ArticleComponent,
     NotFoundComponent,
     PaginationComponent,
- 
+    LoginComponent,
+    SignupComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
   ],
   providers: [ConfigService, PagerService],
   bootstrap: [AppComponent]

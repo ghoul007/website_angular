@@ -1,3 +1,3 @@
-<app-post  [post]=post ></app-post>
+<app-post  *ngIf="post" [post]=post ></app-post>
 
 <a (click)="getBack()" class="button" >back</a>

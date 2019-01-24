@@ -16,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AuthGuard } from './auth.guard';
+import { ArticleCreateComponent } from './article-create/article-create.component';
+import { ArticleEditComponent } from './article-edit/article-edit.component';
 
 
 const routes: Routes = [
@@ -30,7 +32,9 @@ const routes: Routes = [
   { path: 'Gallery', component: GalleryComponent },
   { path: 'Clients', component: ClientComponent },
   { path: 'Blogs', component: BlogComponent, canActivate:[AuthGuard] },
-  { path: 'article/:id', component: ArticleComponent },
+  { path: 'article/:id', component: ArticleComponent, canActivate:[AuthGuard] },
+  { path: 'article-edit/:id', component: ArticleEditComponent, canActivate:[AuthGuard] },
+  { path: 'article-create', component: ArticleCreateComponent, canActivate:[AuthGuard] },
   { path: 'Pricing', component: PricingComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }

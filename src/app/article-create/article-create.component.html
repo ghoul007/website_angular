@@ -1,0 +1,63 @@
+<section id="pricing" class="secondary-color text-center scrollto clearfix ">
+  <div class="row clearfix">
+
+    <div class="col-2-2">
+
+      <div class="center-form panel">
+        <div class="panel-body">
+          <h4 class="text-center">
+            <i class="ion-log-in"></i> Create the post</h4>
+
+          <form [formGroup]="postCreateForm" (ngSubmit)="addPost(postCreateForm.value)">
+
+            <div class="form-group">
+              <input type="text" class="form-control input-lg" name="title" placeholder="title" formControlName="title">
+              <span class="ion-key form-control-icon"></span>
+            </div>
+            <div class="form-group" hidden>
+              <input type="text" class="form-control input-lg" name="author" placeholder="author" formControlName="author">
+              <span class="ion-key form-control-icon"></span>
+            </div>
+            <div class="form-group" hidden>
+              <input type="text" class="form-control input-lg" name="publishdate" placeholder="publish date" formControlName="publishdate">
+              <span class="ion-key form-control-icon"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control input-lg" name="image" placeholder="image" formControlName="image">
+              <span class="ion-key form-control-icon"></span>
+            </div>
+            <div class="form-group">
+              <textarea rows="10" class="form-control input-lg" name="excert" placeholder="excert" formControlName="excert">
+  
+                  </textarea>
+              <span class="ion-key form-control-icon"></span>
+            </div>
+
+            <button type="submit" class="btn btn-block btn-success"> Create</button>
+
+
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="col-2-3">
+
+      <div class="panel">
+        <div class="panel-body">
+          <div markdown [data]="postCreateForm.value.excert" id="preview">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <section>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-post',
@@ -8,10 +9,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PostComponent implements OnInit {
 
   @Input() post = {};
-
-  constructor() { }
+id: number;
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+      this.id  =  this.route.snapshot.params['id']
   }
 
 }

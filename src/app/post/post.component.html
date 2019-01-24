@@ -6,8 +6,9 @@
 <img src="/assets/images/gallery-images/{{post.image}}" alt="">
         </div>
         <ul>
- 
+                <div *ngIf="id" markdown [data]="post.excert" id="preview"> </div> 
         </ul>
-        <a  routerLink="/article/{{post.id}}" >Read More</a>
+        <a class="button" routerLink="/article/{{post.id}}" ><i class="fa fa-heart"></i> show</a>
+        <a class="button" routerLink="/article-edit/{{post.id}}" ><i class="fa fa-edit"></i>edit </a>
     </div>
  

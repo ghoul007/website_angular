@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  post: { id: number; title: string; image: string; author: string; publishdate: string; excert: string; };
+  post: any
 
   constructor(
     private activeRoute: ActivatedRoute,
@@ -18,12 +18,18 @@ export class ArticleComponent implements OnInit {
     private config: ConfigService) { }
 
   ngOnInit() {
-    const id = this.activeRoute.snapshot.params.id
-    this.post = this.getPostByID(id);
+    const id = this.activeRoute.snapshot.params.id;
+    this.getPostByID(id)
   }
 
   getPostByID(id: number) {
-    return this.config.getConfig().blog.posts.find(r => r.id == id)
+    // return this.config.getConfig().blog.posts.find(r => r.id == id)
+    return this.config.getPostByID(id).subscribe(
+      post => 
+      {
+        this.post = post;
+      }
+    );
   }
 
   getBack() {

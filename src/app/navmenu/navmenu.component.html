@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let menuitem of menu">
+      <a [routerLink]="menuitem.link" routerLinkActive ="active"    >{{menuitem.title}}</a>
+    </li>
+ 
+    <li *ngIf="isLogin">
+      <a (click)="logout()" >Logout</a>
+    </li>
+  </ul>

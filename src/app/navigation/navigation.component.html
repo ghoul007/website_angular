@@ -1,34 +1,13 @@
 <nav id="nav-main">
-    <ul>
-      <li>
-        <a [routerLink]="['/Home']" routerLinkActive ="active"    >Home</a>
-      </li>
-      <li>
-        <a routerLink="/About"  routerLinkActive="active" >About</a>
-      </li>
-      <li>
-        <a routerLink="/Gallery"  routerLinkActive="active" >Gallery</a>
-      </li>
-      <li>
-        <a routerLink="/Services"  routerLinkActive="active" >Services</a>
-      </li>
-      <li>
-        <a routerLink="/Testimonials"  routerLinkActive="active" >Testimonials</a>
-      </li>
-      <li>
-        <a routerLink="/Clients"  routerLinkActive="active" >Clients</a>
-      </li>
-      <li>
-        <a routerLink="/Pricing"  routerLinkActive="active" >Pricing</a>
-      </li>
-      <li>
-        <a routerLink="/Blogs"  routerLinkActive="active" >Blog</a>
-      </li>
-      <li *ngIf="!isLogin">
-        <a routerLink="/login" >Login</a>
-      </li>
-      <li *ngIf="isLogin">
-        <a (click)="logout()" >Logout</a>
-      </li>
-    </ul>
+  <app-navmenu [menu]="menu"></app-navmenu>
   </nav>
+
+
+  <div id="nav-trigger">
+      <span></span>
+    </div>
+    <nav id="nav-mobile">
+
+        <app-navmenu [menu]="menu"></app-navmenu>
+
+    </nav>

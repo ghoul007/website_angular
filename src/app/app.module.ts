@@ -31,6 +31,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ArticleCreateComponent } from './article-create/article-create.component';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
+import { NavmenuComponent } from './navmenu/navmenu.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { ArticleEditComponent } from './article-edit/article-edit.component';
     SignupComponent,
     ContactusComponent,
     ArticleCreateComponent,
-    ArticleEditComponent
+    ArticleEditComponent,
+    NavmenuComponent
   ],
   imports: [
     BrowserModule,

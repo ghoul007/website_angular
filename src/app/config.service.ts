@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
 
 const httpOptions = {
   headers: new HttpHeaders(
-    {'Content-type':'application/json'}
+    { 'Content-type': 'application/json' }
   )
 }
 @Injectable({
@@ -27,6 +27,18 @@ export class ConfigService {
       catchError(this.handleError('post', [])))
   }
 
+  getSettings(database: String, id?: string): Observable<any> {
+
+    let uid = id || null;
+    let url: string;
+    uid !== null ? url = `api/${database}/${id}` : url = `api/${database}`;
+    return this.http.get(url).pipe(
+      tap(
+        setting => console.log(setting)
+      ),
+      catchError(this.handleError('setting', [])))
+  }
+
 
   addPost(formData: NgForm): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}`, formData, httpOptions).pipe(
@@ -38,15 +50,15 @@ export class ConfigService {
   }
 
 
-  updatePost(formData: NgForm){
-    return this.http.put(`${this.apiUrl}`,formData,  httpOptions).pipe(
+  updatePost(formData: NgForm) {
+    return this.http.put(`${this.apiUrl}`, formData, httpOptions).pipe(
       tap(
         post => console.log(post)
       ),
       catchError(this.handleError('update post by ID', [])))
   }
 
-  getPostByID(id: number){
+  getPostByID(id: number) {
     return this.http.get(`${this.apiUrl}/${id}`).pipe(
       tap(
         post => console.log(post)

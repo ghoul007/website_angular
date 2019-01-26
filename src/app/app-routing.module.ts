@@ -22,20 +22,20 @@ import { ArticleEditComponent } from './article-edit/article-edit.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
-  { path: 'Home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'contactus', component: ContactusComponent },
-  { path: 'About', component: AboutComponent },
-  { path: 'Services', component: ContentComponent },
-  { path: 'Testimonials', component: TestimonialComponent },
-  { path: 'Gallery', component: GalleryComponent },
-  { path: 'Clients', component: ClientComponent },
-  { path: 'Blogs', component: BlogComponent, canActivate:[AuthGuard] },
+  { path: 'about', component: AboutComponent },
+  { path: 'services', component: ContentComponent },
+  { path: 'testimonials', component: TestimonialComponent },
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'clients', component: ClientComponent },
+  { path: 'blogs', component: BlogComponent, canActivate:[AuthGuard] },
   { path: 'article/:id', component: ArticleComponent, canActivate:[AuthGuard] },
   { path: 'article-edit/:id', component: ArticleEditComponent, canActivate:[AuthGuard] },
   { path: 'article-create', component: ArticleCreateComponent, canActivate:[AuthGuard] },
-  { path: 'Pricing', component: PricingComponent },
+  { path: 'pricing', component: PricingComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }
 ]

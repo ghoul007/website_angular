@@ -11,6 +11,19 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 1, firstName: 'ahmed1', lastName: "ghoul", password: 'hello', email: 'ahmed@gmail.com' }
     ]
 
+    const menu = [
+      {id: 1, title: 'Home', link: '/home', outlet: ''},
+      {id: 2, title: 'About', link: '/about', outlet: ''},
+      {id: 3, title: 'Services', link: '/services', outlet: ''},
+      {id: 4, title: 'Gallery', link: '/gallery', outlet: ''},
+      {id: 5, title: 'Testimonials', link: '/testimonials', outlet: ''},
+      {id: 6, title: 'Clients', link: '/clients', outlet: ''},
+      {id: 7, title: 'Pricing', link: '/pricing', outlet: ''},
+      {id: 8, title: 'Blog', link: '/blog', outlet: ''},
+      {id: 9, title: 'Contact Us', link: 'contactus', outlet: 'popup'},
+      {id: 10, title: 'Subscribe', link: 'subscribe', outlet: 'popup'},
+    ];
+
 
     const posts = [
       { id: 1, title: 'the first article', image: 'gallery-image-1.jpg', author: 'A', publishdate: '2018-06-11', excert: '' },
@@ -24,7 +37,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 9, title: 'the third article', image: 'gallery-image-7.jpg', author: 'g', publishdate: '2018-06-11', excert: '' },
       { id: 10, title: 'the third article', image: 'gallery-image-7.jpg', author: 'g', publishdate: '2018-06-11', excert: '' }
     ]
-    return { users, posts }
+    return { users, posts, menu }
   }
 
 

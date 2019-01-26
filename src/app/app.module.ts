@@ -32,6 +32,7 @@ import { ArticleCreateComponent } from './article-create/article-create.componen
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
+import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { NavmenuComponent } from './navmenu/navmenu.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    UserDashboardModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
     MarkdownModule.forRoot({

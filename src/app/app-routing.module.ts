@@ -18,6 +18,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AuthGuard } from './auth.guard';
 import { ArticleCreateComponent } from './article-create/article-create.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
+import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 
 
 const routes: Routes = [
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'testimonials', component: TestimonialComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'clients', component: ClientComponent },
+  { path: 'dashboard', loadChildren:()=>UserDashboardModule, canActivate:[AuthGuard]  },
   { path: 'blogs', component: BlogComponent, canActivate:[AuthGuard] },
   { path: 'article/:id', component: ArticleComponent, canActivate:[AuthGuard] },
   { path: 'article-edit/:id', component: ArticleEditComponent, canActivate:[AuthGuard] },

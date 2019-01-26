@@ -1,22 +1,24 @@
 <aside>
-        <app-social></app-social>
-        <app-user-profile-icon [profileImage]="profileImage" ></app-user-profile-icon>
-      
-      </aside>
+  <a [routerLink]="[{outlets:{  popup :[ 'subscribe']}}]"> SUBSCRIBE</a>
+  <a [routerLink]="[{outlets:{  popup :[ 'contactus']}}]"> CONTACT</a>
+  <app-social></app-social>
+  <app-user-profile-icon [profileImage]="profileImage"></app-user-profile-icon>
 
-      
+</aside>
+
+
 
 <nav id="nav-main">
   <app-navmenu [menu]="menu"></app-navmenu>
 
-  </nav>
+</nav>
 
 
-  <div id="nav-trigger">
-      <span></span>
-    </div>
-    <nav id="nav-mobile">
+<div id="nav-trigger">
+  <span></span>
+</div>
+<nav id="nav-mobile">
 
-        <app-navmenu [menu]="menu"></app-navmenu>
+  <app-navmenu [menu]="menu"></app-navmenu>
 
-    </nav>
+</nav>

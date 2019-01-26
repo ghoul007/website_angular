@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Validators, FormBuilder, FormGroup, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contactus',
@@ -10,10 +11,12 @@ export class ContactusComponent implements OnInit {
 
  
   contactusForm: FormGroup
-  constructor(private formBuilder: FormBuilder) { }
+  sending: boolean;
+  constructor(private formBuilder: FormBuilder, private router:Router) { }
 
   ngOnInit() {
     this.initForm();
+    this.sending = false;
   }
 
   initForm() {
@@ -29,4 +32,24 @@ export class ContactusComponent implements OnInit {
   sendMessage(value) {
     console.log("value ", value);
   }
+
+
+  subscribe(formData: NgForm) {
+    this.sending = true;
+    console.log(formData);
+    setTimeout(() => {
+      this.sending = false;
+      this.cancelForm();
+    }, 1000);
+  }
+
+  cancel() {
+    this.cancelForm();
+  }
+
+  cancelForm() {
+    this.router.navigate([{outlets: { popup: null }}] );
+  }
+
+
 }

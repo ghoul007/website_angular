@@ -19,6 +19,7 @@ import { AuthGuard } from './auth.guard';
 import { ArticleCreateComponent } from './article-create/article-create.component';
 import { ArticleEditComponent } from './article-edit/article-edit.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
+import { SubscribeComponent } from './subscribe/subscribe.component';
 
 
 const routes: Routes = [
@@ -26,12 +27,13 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'contactus', component: ContactusComponent },
+  { path: 'contactus', component: ContactusComponent, outlet:'popup' },
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ContentComponent },
   { path: 'testimonials', component: TestimonialComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'clients', component: ClientComponent },
+  { path: 'subscribe', component: SubscribeComponent, outlet: "popup" },
   { path: 'dashboard', loadChildren:()=>UserDashboardModule, canActivate:[AuthGuard]  },
   { path: 'blogs', component: BlogComponent, canActivate:[AuthGuard] },
   { path: 'article/:id', component: ArticleComponent, canActivate:[AuthGuard] },

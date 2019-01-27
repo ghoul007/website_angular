@@ -25,6 +25,63 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
 
+    const pages = [
+      {id: 'intro',
+        tagline: 'SUCESS',
+        title: 'How We Help You To Sell Your Product',
+        description: 'This is introduction!',
+      },
+      {id: 'clients',
+        tagline: 'TRUST',
+        title: 'Companies who use our services',
+        description: 'Our clients',
+      },
+      {id: 'services',
+        tagline: 'BELIEVING',
+        title: 'Focusing On What Matters Most',
+        description: 'Service Section'
+      },
+      {id: 'testimonials',
+        tagline: 'FEEDBACK',
+        title: 'What our customers are saying',
+        description: 'This is what our customer\'s feel about us',
+      },
+      {id: 'pricing',
+        tagline: 'YOUR CHOICE',
+        title: 'We have the right package for you',
+        description: '',
+      },
+      {id: 'gallery',
+        tagline: 'We ❤ Doing amazing things',
+        title: 'AdMISTER STUDIO',
+        description: 'We are and amazing company',
+      },
+      {id: 'footer',
+        copyrighttext: 'Made with ❤ by',
+        developer: 'AdMISTER STUDIO',
+        developerlink: 'http://admister.in',
+      },
+      {id: 'blog',
+        tagline: 'My thoughts',
+        title: 'Thoughts become things',
+        description: 'We are and amazing company',
+      },
+      {id: 'header',
+        heading: 'AdMister Studios',
+        headingtext: 'This website was created using Angular 6',
+        buttontext: 'do some action!',
+        buttonlink: '/home',
+        image: 'banner-image-1.jpg'
+      },
+    ];
+
+    const features= [
+      { icon: 'html5', title: 'HTML5 &amp; CSS3', description: 'Has ne tritani atomorum conclusionemque, in dolorum volumus cotidieque eum. At vis choro neglegentur iudico' },
+      { icon: 'bolt', title: 'Easy to Use', description: 'Cu vero ipsum vim, doctus facilisi sea in. Eam ex falli honestatis repudiandae, sit detracto mediocrem disputationi' },
+      { icon: 'tablet', title: 'Fully Responsive', description: 'Id porro tritani recusabo usu, eum intellegam consequuntur et. Fugit debet ea sit, an pro nemore vivendum' },
+      { icon: 'rocket', title: 'Parallax Effect', description: 'Id porro tritani recusabo usu, eum intellegam consequuntur et. Fugit debet ea sit, an pro nemore vivendum' },
+  ]
+
     const posts = [
       { id: 1, title: 'the first article', image: 'gallery-image-1.jpg', author: 'A', publishdate: '2018-06-11', excert: '' },
       { id: 2, title: 'the second article', image: 'gallery-image-2.jpg', author: 'B', publishdate: '2018-06-11', excert: '' },
@@ -37,7 +94,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 9, title: 'the third article', image: 'gallery-image-7.jpg', author: 'g', publishdate: '2018-06-11', excert: '' },
       { id: 10, title: 'the third article', image: 'gallery-image-7.jpg', author: 'g', publishdate: '2018-06-11', excert: '' }
     ]
-    return { users, posts, menu }
+    return { users, posts, menu, pages }
   }
 
 

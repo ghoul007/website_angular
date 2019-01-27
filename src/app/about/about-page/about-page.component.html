@@ -1,0 +1,26 @@
+<section id="about" class="introduction scrollto">
+
+        <div class="row clearfix">
+    
+            <div class="col-3">
+                <div class="section-heading">
+                    <h3>{{intro.taglien}}</h3>
+                    <h2 class="section-title">{{intro.title}}</h2>
+                    <p class="section-subtitle">{{intro.description}}</p>
+                </div>
+    
+            </div>
+    
+            <div class="col-2-3" *ngIf="features.length">
+    
+                <!--Icon Block-->
+    <app-feature-block *ngFor="let feat of cfg.features" [feat]=feat ></app-feature-block>
+                <!--End of Icon Block-->
+    
+          
+            </div>
+    
+        </div>
+    
+    
+    </section>

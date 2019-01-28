@@ -11,14 +11,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SocialComponent } from './social/social.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { ConfigService } from './config.service';
-import { BlogComponent } from './blog/blog.component';
-import { PostComponent } from './post/post.component';
-import { ArticleComponent } from './article/article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { PaginationComponent } from './pagination/pagination.component';
-import { PagerService } from './pager.service';
+import { PagerService } from './blog/pager.service';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ContactusComponent } from './contactus/contactus.component';
@@ -26,12 +22,10 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from './in-memory-data.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { ArticleCreateComponent } from './article-create/article-create.component';
-import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
-import { ArticleEditComponent } from './article-edit/article-edit.component';
 import { NavmenuComponent } from './navmenu/navmenu.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { WebsiteBlockComponent } from './website-block/website-block.component';
 
 @NgModule({
   declarations: [
@@ -45,18 +39,13 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     HeaderComponent,
     SocialComponent,
     NavigationComponent,
-    BlogComponent,
-    PostComponent,
-    ArticleComponent,
     NotFoundComponent,
-    PaginationComponent,
     LoginComponent,
     SignupComponent,
     ContactusComponent,
-    ArticleCreateComponent,
-    ArticleEditComponent,
     NavmenuComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    WebsiteBlockComponent
   ],
   imports: [
     BrowserModule,
@@ -66,21 +55,6 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
     UserDashboardModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
-    MarkdownModule.forRoot({
-      loader: HttpClientModule, // optional, only if you use [src] attribute
-      markedOptions: {
-        provide: MarkedOptions,
-        useValue: {
-          gfm: true,
-          tables: true,
-          breaks: false,
-          pedantic: false,
-          sanitize: false,
-          smartLists: true,
-          smartypants: false,
-        },
-      },
-    }),
   ],
   providers: [ConfigService, PagerService],
   bootstrap: [AppComponent]

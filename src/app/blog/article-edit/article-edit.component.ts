@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { AuthenticationService } from '../authentication.service';
-import { ConfigService } from '../config.service';
+import { AuthenticationService } from '../../authentication.service';
+import { ConfigService } from '../../config.service';
 
 @Component({
   selector: 'app-article-edit',

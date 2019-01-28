@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../config.service';
+import { ConfigService } from '../../config.service';
 import { PagerService } from '../pager.service';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+  selector: 'app-blog-page',
+  templateUrl: './blog-page.component.html',
+  styleUrls: ['./blog-page.component.css']
 })
-export class BlogComponent implements OnInit {
+export class BlogPageComponent implements OnInit {
+
   cfg: { tagline: string; title: string; };
   allItems: any[];
   pages: any[];
@@ -21,12 +22,9 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
     this.cfg = this.config.getConfig().blog
     this.getBlogs();
-
- 
   }
 
   getBlogs() {
-
     this.config.getPosts().subscribe(
       posts => { this.posts = posts;
         this.allItems = posts;
@@ -39,5 +37,4 @@ export class BlogComponent implements OnInit {
     console.log("this.pager ", this.pager);
     this.pages = this.allItems.slice(this.pager.startIndex, this.pager.endIndex);
   }
-
 }

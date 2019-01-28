@@ -94,7 +94,18 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 9, title: 'the third article', image: 'gallery-image-7.jpg', author: 'g', publishdate: '2018-06-11', excert: '' },
       { id: 10, title: 'the third article', image: 'gallery-image-7.jpg', author: 'g', publishdate: '2018-06-11', excert: '' }
     ]
-    return { users, posts, menu, pages }
+
+
+
+const websites = [
+  {id: 1, link: 'https://facebook.com/', title: 'Facebook', target: '_blank', username: 'jagmohan', icon: 'facebook'},
+  {id: 2, link: 'https://googleplus.com/', title: 'Google+', target: '_blank', username: '+jagmohan', icon: 'google-plus'},
+  {id: 3, link: 'https://twitter.com/', title: 'Twitter', target: '_blank', username: 'jagmohan', icon: 'twitter'},
+  {id: 4, link: 'https://instagram.com/', title: 'Instagram', target: '_blank', username: 'admister_in', icon: 'instagram'},
+  {id: 5, link: 'https://behance.com/', title: 'Behance', target: '_blank', username: 'jagmohan', icon: 'behance'},
+];
+
+    return { users, posts, menu, pages, websites}
   }
 
 

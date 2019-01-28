@@ -7,12 +7,19 @@ import { ConfigService } from '../config.service';
   styleUrls: ['./social.component.css']
 })
 export class SocialComponent implements OnInit {
-  cfg: { title: string; target: string; username: string; icon: string; }[];
+  socialsites: any;
 
   constructor(private config: ConfigService) { }
 
   ngOnInit() {
-    this.cfg =  this.config.getConfig().socialsites
+    this.getSocialsites();
+    // this.cfg =  this.config.getConfig().socialsites
   }
 
+
+  getSocialsites() {
+    return this.config.getSettings('websites').subscribe(
+      data => this.socialsites = data
+    )
+  }
 }

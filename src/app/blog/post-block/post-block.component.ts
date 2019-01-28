@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  selector: 'app-post-block',
+  templateUrl: './post-block.component.html',
+  styleUrls: ['./post-block.component.css']
 })
-export class PostComponent implements OnInit {
+export class PostBlockComponent implements OnInit {
 
   @Input() post = {};
 id: number;
@@ -15,5 +15,4 @@ id: number;
   ngOnInit() {
       this.id  =  this.route.snapshot.params['id']
   }
-
 }

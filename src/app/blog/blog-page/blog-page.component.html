@@ -1,0 +1,25 @@
+<section id="about" class="secondary-color text-center scrollto clearfix ">
+
+    <div class="row clearfix">
+  
+        <div class="section-heading">
+            <h3>{{cfg.taglien}}</h3>
+            <h2 class="section-title">{{cfg.title}}</h2>
+            <a class="button" routerLink="/blog/article-create" id="add-button" ><i class="fa fa-plus"></i></a>
+        </div>
+  
+  
+  
+        <div *ngFor="let post of pages"  class="pricing-block col-3 wow fadeInUp" data-wow-delay="0.4s">
+  <app-post-block [post]=post ></app-post-block>
+  </div>
+    </div>
+  
+  
+    <div>
+   
+  <app-pagination [pager]=pager  (setPage)="setPage($event)"></app-pagination>
+  
+    </div>
+  
+  </section>

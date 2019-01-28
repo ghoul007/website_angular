@@ -1,11 +1,8 @@
 
     <!--Social Icons in Header-->
     <ul class="social-icons">
-      <li *ngFor="let social of cfg">
-        <a target="{{social.target}}" title="{{social.name}}" href="https://www.facebook.com/{{social.username}}">
-          <i class="fa fa-{{social.icon}} fa-1x"></i>
-          <span>{{social.name}}</span>
-        </a>
+      <li *ngFor="let social of socialsites">
+      <app-website-block [website]=social></app-website-block>
       </li>
  
     </ul>

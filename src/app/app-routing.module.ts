@@ -7,19 +7,16 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ClientComponent } from './client/client.component';
 import { PricingComponent } from './pricing/pricing.component';
-import { BlogComponent } from './blog/blog.component';
-import { ArticleComponent } from './article/article.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AuthGuard } from './auth.guard';
-import { ArticleCreateComponent } from './article-create/article-create.component';
-import { ArticleEditComponent } from './article-edit/article-edit.component';
 import { UserDashboardModule } from './user-dashboard/user-dashboard.module';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
+import { BlogModule } from './blog/blog.module';
 
 
 const routes: Routes = [
@@ -35,10 +32,7 @@ const routes: Routes = [
   { path: 'clients', component: ClientComponent },
   { path: 'subscribe', component: SubscribeComponent, outlet: "popup" },
   { path: 'dashboard', loadChildren: () => UserDashboardModule, canActivate: [AuthGuard] },
-  { path: 'blogs', component: BlogComponent, canActivate: [AuthGuard] },
-  { path: 'article/:id', component: ArticleComponent, canActivate: [AuthGuard] },
-  { path: 'article-edit/:id', component: ArticleEditComponent, canActivate: [AuthGuard] },
-  { path: 'article-create', component: ArticleCreateComponent, canActivate: [AuthGuard] },
+  { path: 'blog', loadChildren: () => BlogModule, canActivate: [AuthGuard] },
   { path: 'pricing', component: PricingComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }

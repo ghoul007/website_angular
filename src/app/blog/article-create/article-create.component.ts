@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { AuthenticationService } from '../authentication.service';
-import { ConfigService } from '../config.service';
+import { AuthenticationService } from '../../authentication.service';
+import { ConfigService } from '../../config.service';
 
 
 @Component({
@@ -44,7 +44,7 @@ export class ArticleCreateComponent implements OnInit {
 
   addPost(formData: NgForm) {
     this.config.addPost(formData).subscribe(
-      post => this.router.navigate([`article/${post['id']}`])
+      post => this.router.navigate([`/blog/article/${post['id']}`])
     );
   }
 

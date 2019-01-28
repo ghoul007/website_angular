@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ConfigService } from '../config.service';
 import { Location } from '@angular/common';
+import { ConfigService } from '../../config.service';
 
 
 @Component({
